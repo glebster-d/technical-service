@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>מערכת תחזוקנית</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="mainWindow.css">
+</head>
+
+<body>
+    <div id="buttons-container" role="banner" dir="rtl">
+        <div id="button-vertical">
+            <button type="button" class="btn btn-primary" id="new-work">קריאה חדשה</button>
+            <button type="button" class="btn btn-primary" id="print-all-works">הדפס כל הקריאות</button>
+        </div>
+    </div>
+    <table id="main-table" role="table">
+        <thead id="table-header">
+            <tr>
+                <th>שם המזמין</th>
+                <th>מקבל הודעה</th>
+                <th>סטטוס עבודה</th>
+                <th>אחראי</th>
+                <th>תאור תקלה</th>
+                <th>משרד</th>
+                <th>קומה</th>
+                <th>תאריך פתיחה</th>
+                <th>מספר עבודה</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <tr>
+                <td class="centered-field">Mazmin aka</td>
+                <td class="centered-field">Bakar Aka</td>
+                <td class="centered-field">
+                    <select style="width: 100%;">
+                        <option>Online</option>
+                        <option>Offline</option>
+                    </select>
+                    
+                </td>
+                <td class="centered-field">Igor</td>
+                <td>Air conditioner not working</td>
+                <td class="centered-field">Electra Ltd.</td>
+                <td class="centered-field">24</td>
+                <td class="centered-field">20/11/2019</td>
+                <td class="centered-field">20112019-12</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <script src="mainWindow.js"></script>
+    <script>
+        var table = document.getElementById('main-table');
+        resizableGrid(table);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body { 
+    height: 100%; 
+    padding: 0; 
+    margin: 0; 
+}
+
+h1 {   
+    width: auto;
+    position: relative;
+    text-align: center;
+}
+
+/* input:invalid {
+    box-shadow: 0 0 5px 1px red;
+} */
+
+/* input:valid {
+    box-shadow: 0 0 5px 1px black;
+} */
+
+/* input:focus:invalid {
+    box-shadow: red;
+} */
+
+.section-header {
+    background-color: #87CEEB;
+    
+    /* font-size: 2em; */
+    /* height: 30px;   */
+    /* position: relative;    */
+}
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;    
+    z-index: 1;
+    /* top: 0; */
+    overflow: hidden;
+    padding-top: 20px;
+}  
+/* Control the left side */
+.left {    
+    left: 0;
+    padding-top: 0;   
+}
+  
+/* Control the right side */
+.right {
+    right: 0;
+    padding-top: 0;
+}
+
+.field-label {
+    text-align: right;
+    /* font-size: 10px; */
+}
+.field-data {
+    text-align: left;
+}
+
+#buttons-container {
+    background-color:  #f2f3f4;
+    width: 100%;
+    height: 60px;  
+    position: relative;
+    display: table;  
+}
+  /* #button-vertical-start {
+    margin: 0;
+    position: absolute;
+    padding-right: 20px;
+    top: 50%;  
+    transform: translateY(-50%);    
+  } */
+
+#button-vertical-start {
+    
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    padding-right: 20px;
+    
+    /* margin: 0;
+    position: absolute;
+    padding-right: 20px;
+    top: 50%;  
+    transform: translateY(-50%);     */
+}
+
+#button-vertical-end {
+
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 20px;    
+}
+
+/* ----- BUTTONS CSS ----- */
+#buttons-container .btn {
+    display: inline-block;
+    margin: 6px;
+    font-size: inherit;
+    line-height: 1.42;
+    padding: 0.6em 2.5em;
+    font-weight: normal;
+    border-width: 0;
+    border-style: solid;
+    background: transparent;
+    border-radius: 1.31em;
+    cursor: pointer;
+    font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
+    user-select: none;
+    vertical-align: bottom;
+    transition: box-shadow 0.15s, transform 0.15s, color 0.15s;
+  }
+  #buttons-container .btn.btn-disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+  }
+  #buttons-container .btn.btn-disabled:active {
+    opacity: 0.6;
+  }
+  #buttons-container .btn:active {
+    transform: translateY(2px);
+  }
+  #buttons-container .btn-primary {
+    background-color: #52C11F;
+    background-image: linear-gradient(0deg, #439e19, #52C11F, #5bd723);
+    color: #E6EAEF;
+    box-shadow: 0 2px 0 0 #2d6911, 0 1.31em 2em 0 rgba(255, 255, 255, 0) inset, 0 2px 1px 0 rgba(255, 255, 255, 0.1) inset, 0 2px 3px 1px rgba(0, 0, 0, 0.4), 0 0 12px 1px rgba(82, 193, 31, 0.5), 0 2px 1px -1px rgba(0, 0, 0, 0) inset;
+  }
+  #buttons-container .btn-primary:hover {
+    box-shadow: 0 2px 0 0 #2d6911, 0 1.31em 1em 0 rgba(255, 255, 255, 0.05) inset, 0 2px 1px 0 rgba(255, 255, 255, 0.15) inset, 0 2px 3px 1px rgba(0, 0, 0, 0.6), 0 0 10px 1px rgba(82, 193, 31, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0) inset;
+  }
+#buttons-container .btn-primary:active {
+    background-color: #49ab1b;
+    background-image: linear-gradient(180deg, #3f9518, #4baf1c);
+    color: #2d6911;
+    transition: 0s;
+    box-shadow: 0 0px 0 0 #23530d, 0 1.31em 1em 0 rgba(255, 255, 255, 0.05) inset, 0 2px 2px 0 rgba(255, 255, 255, 0) inset, 0 1px 4px 0px rgba(0, 0, 0, 0), 0 0 10px 1px rgba(82, 193, 31, 0.1), 0 2px 2px -1px rgba(0, 0, 0, 0.7) inset;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+textarea {
+    resize: none;
+    overflow-y: scroll;
+}
+
+table {
+    padding-right: 15px;
+}
+
+.regular-field-large {
+    height: 20px;
+    width: 500px;
+    font-size: 16px;
+}
+
+.regular-field-medium {
+    height: 20px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.regular-field-small {
+    height: 20px;
+    width: 100px;
+    font-size: 16px;
+}
+
+
+  
+
+/* SERVICE-CLIENT CSS */  /* right 1st*/
+#service-client-container { 
+    background-color: darkgrey;
+    margin-top: 0; 
+    margin-left: 2px;
+    margin-right: 5px;
+    padding: 0; 
+    /* height: 25%; */
+
+    /* border:1px solid #000;
+    border-spacing: 1px; */
+   
+    /* width: 50%; float: right; */
+}
+/* WORK-DESCRIPTION CSS */  /* right 2nd*/
+#work-description-container {
+    background-color: darkgrey;
+    margin-top: 0; 
+    margin-left: 2px;
+    margin-right: 5px; 
+    padding: 0; 
+    /* height: 25%; */
+    /* width: 50%;
+    float: right; */
+}
+/* WORK-COSTS CSS */    /* right 3d*/
+#work-costs-container {
+    background-color: darkgrey;
+    margin-top: 0; 
+    margin-left: 2px;
+    margin-right: 5px; 
+    /* height: 25%;     */
+    /* width: 50%;
+    float: right; */
+   
+}
+/* CLIENT-DATA CSS */   /* left 1st*/
+#client-data-container {
+    background-color: darkgrey;
+    margin-top: 0; 
+    margin-left: 5px;
+    margin-right: 2px; 
+      
+    /* height: 25%;    */
+    /* width: 50%;
+    float: right; */
+}
+/* WORK-DATA CSS*/  /* left 2nd*/
+#work-data-container {
+    background-color: darkgrey;
+    margin-top: 0; 
+    margin-left: 5px;
+    margin-right: 2px; 
+       
+    /* height: 25%;     */
+    /* width: 50%;
+    float: right; */
+}
+/* WORK-MAINTAINER CSS */   /* left 3d*/
+#work-maintainer-container {
+    background-color: darkgrey;
+    margin-top: 0; 
+    margin-left: 2px;
+    margin-right: 2px; 
+      
+    /* height: 25%;     */
+    /* width: 50%;
+    float: right; */
+}
+/* WORK-BUDGET CSS */   /* left 4th*/
+#work-budget-container {
+    background-color: darkgrey;
+    margin-top: 0; 
+    margin-left: 2px;
+    margin-right: 2px; 
+      
+    /* height: 25%; */
+    /* width: 50%;
+    float: right; */
+}
+
+

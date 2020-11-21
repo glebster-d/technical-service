@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+
+<head>
+    <title>עבודה חדשה</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="addWindow.css">
+</head>
+
+<body>
+    <div id="buttons-container">
+        <div id="button-vertical-start">
+            <button id="submit" form="work-registraton" class="btn btn-primary">שמור</button>
+            <button id="reset" class="btn btn-primary">בטל</button>
+        </div>
+        <div id="button-vertical-end">
+            <button id="print" class="btn btn-primary">הדפס עבודה</button>
+        </div>
+    </div>
+
+    <form action="" , name="work-registraton">
+        <div class="split right">
+            <div id="service-client-container">
+                <div class="section-header">
+                    <h1>ציוד ומקבל שירות</h1>
+                </div>
+                <table>
+                    <tr>
+                        <th>
+                            <div class="field-label">ציוד:</div>
+                        </th>
+                        <th>
+                            <div><input type="text" class="regular-field-medium" id="instruments-code"></div>
+                        </th>
+                        <th>
+                            <div><input type="text" class="regular-field-large" id="instruments-description"></div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">מקבל שירות:</div>
+                        </th>
+                        <th>
+                            <div><input type="text" class="regular-field-medium" id="client-office-code"></div>
+                        </th>
+                        <th>
+                            <div><input type="text" class="regular-field-large" id="client-office-name" required></div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">קומה:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <select class="regular-field-small" name="floor" id="floor" required>
+                                    <option hidden disabled selected value></option>
+                                </select>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div id="work-description-container">
+                <div class="section-header">
+                    <h1>תאור עבודה</h1>
+                </div>
+                <table>
+                    <tr>
+                        <th>
+                            <div class="field-label">סוג עבודה:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <select name="work-type" class="regular-field-small" id="work-type">
+                                    <option value="0">עבודת שבר</option>
+                                    <option value="1">עבודה יוזמה</option>
+                                    <option value="2">הפעלת גנרטור</option>
+                                    <option value="3">אחזקה מונעת</option>
+                                    <!-- <option hidden disabled selected value></option> -->
+                                </select>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">תאור תקלה:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <textarea name="input-work-description" id="input-work-description" cols="90" rows="5" required></textarea>
+                                <!-- <input type="text" id="input-work-description" required> -->
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">תאור תיקון:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <textarea name="input-repair-description" id="input-repair-description" cols="90" rows="5"></textarea>
+                                <!-- <input type="text" id="input-repair-description"> -->
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">הוראות ביצוע:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <textarea name="input-repair-comment" id="input-repair-comment" cols="90" rows="5"></textarea>
+                                <!-- <input type="text" id="input-repair-comment"> -->
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div id="work-costs-container">
+                <div class="section-header">
+                    <h1>עלויות</h1>
+                </div>
+                <table>
+                    <tr>
+                        <th>
+                            <div class="field-label">פריטים:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="number" name="cost-details" id="cost-details" min="0.0" placeholder="0.00">
+                            </div>
+                        </th>
+                        <th>
+                            <div class="field-label">עובדי מחלקה:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="number" name="cost-worker" id="cost-worker" min="0.0" placeholder="0.00">
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">רכש ישיר:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="number" name="cost-parts" id="cost-parts" min="0.0" placeholder="0.00">
+                            </div>
+                        </th>
+                        <th>
+                            <div class="field-label">עובדי קבלן:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="number" name="cost-worker-out" id="cost-worker-out" min="0.0"
+                                    placeholder="0.00">
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">קבלן:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="number" name="cost-outsource" id="cost-outsource" min="0.0"
+                                    placeholder="0.00">
+                            </div>
+                        </th>
+                        <th>
+                            <div class="field-label">מעגר משולב:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="number" name="cost-pool" id="cost-pool" min="0.0" placeholder="0.00">
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">עלות כוללת:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="number" name="cost-total" id="cost-total" min="0.0" placeholder="0.00">
+                            </div>
+                        </th>
+                        <th>
+                            <div class="field-label">מחירונים:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="number" name="cost-pricelists" id="cost-pricelists" min="0.0"
+                                    placeholder="0.00">
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="split left">
+            <div id="client-data-container">
+                <div class="section-header">
+                    <h1>פרטי המזמין</h1>
+                </div>
+                <table>
+                    <tr>
+                        <th>
+                            <div class="field-label">לקוח:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="text" id="client">
+                            </div>
+                        </th>
+                        <th>
+                            <div class="field-label">סוג מזמין:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="text" id="client-type">
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">שם מזמין:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="text" id="client-name">
+                            </div>
+                        </th>
+                        <th>
+                            <div class="field-label">טלפון מזמין:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="tel" id="client-phone" name="client-phone">
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">מייל:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="email" id="client-email" name="client-email">
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div id="work-data-container">
+                <div class="section-header">
+                    <h1>פרטי העבודה</h1>
+                </div>
+                <table>
+                    <tr>
+                        <th>
+                            <div class="field-label">מועד פתיחה:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="date" name="work-opened-date" id="work-opened-date">
+                                <input type="time" name="work-opened-time" id="work-opened-time">
+                            </div>
+                        </th>
+                        <th>
+                            <div class="field-label">סטטוס עבודה:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <select class="regular-field-small" name="work-status" id="work-status" required>
+                                    <option value="0" selected>בביצוע</option>
+                                    <option value="1">הצעת מחיר</option>
+                                    <option value="2">בהשהיה</option>
+                                    <option value="3">בביצוע אצל גורם חוץ</option>
+                                    <option value="4">בוטל</option>
+                                    <option value="5">הסתיים</option>
+                                </select>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">מועד התחלה:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="date" name="work-start-date" id="work-start-date">
+                                <input type="time" name="work-start-time" id="work-start-time">
+                            </div>
+                        </th>
+                        <th>
+                            <div class="field-label">מקבל הודעה:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <select class="regular-field-small" name="operator-name" id="operator-name" required>                                    
+                                    <option hidden disabled selected value="0"></option>
+                                </select>                               
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">מועד סיום:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="date" name="work-end-date" id="work-end-date">
+                                <input type="time" name="work-end-time" id="work-end-time">                               
+                            </div>
+                        </th>
+                        <th>
+                            <div class="field-label">סוג טופס:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <select class="regular-field-small" name="blank-type" id="blank-type">
+                                    <option>דו"ח שרות בר</option>
+                                    <option>בקשר תשלום לאישור עתידים</option>
+                                    <option>בקשה הצעת מחיר לאישור עתידים</option>
+                                    <option>פרוט חשבון בר</option>
+                                    <option>דו"ח שרות עתידים</option>
+                                    <option>הצעת מחיר בר רגיל</option>
+                                    <option>הצעת מחיר חניון</option>
+                                    <option hidden disabled selected value></option>
+                                </select>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div id="work-maintainer-container">
+                <div class="section-header">
+                    <h1>מבצע</h1>
+                </div>
+                <table>
+                    <tr>
+                        <th>
+                            <div class="field-label">מחלקה:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="radio" name="department-choice" id="department-choice" checked>
+                            </div>
+                        </th>
+                        <th>
+                            <div>
+                                <!-- <input type="text" name="dep-choice-name" id="dep-choice-name" required> -->
+                                <select class="regular-field-small" name="dep-choice-name" id="dep-choice-name" required>                                    
+                                    <option hidden disabled selected value="0"></option>
+                                </select>                                
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">קבלן:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="radio" name="department-choice" id="outsource-choice">
+                            </div>
+                        </th>
+                        <th>
+                            <div>
+                                <!-- <input type="text" name="out-choice-name" id="out-choice-name" hidden required> -->
+                                <select class="regular-field-small" name="out-choice-name" id="out-choice-name" hidden required>                                    
+                                    <option hidden disabled selected value></option>
+                                </select>  
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">אחראי:</div>
+                        </th>
+                        <th></th>
+                        <th>
+                            <div>
+                                <!-- <input type="text" name="technician-name" id="technician-name" required> -->
+                                <select class="regular-field-small" name="technician-name" id="technician-name" required>                                    
+                                    <option hidden disabled selected value></option>
+                                </select>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div id="work-budget-container">
+                <div class="section-header">
+                    <h1>תקציב</h1>
+                </div>
+                <table>
+                    <tr>
+                        <th>
+                            <div class="field-label">תקציב:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="number" name="budget" id="budget" min="0.0">
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">סכום מוערך:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="number" name="budget-aproximation" id="budget-aproximation" min="0.0"
+                                    placeholder="0.00">
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="field-label">ניצול:</div>
+                        </th>
+                        <th>
+                            <div>
+                                <input type="number" name="budget-used" id="budget-used" min="0.0"> &nbsp;
+                                <strong>%</strong>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+
+    <script src="addWindow.js"></script>
+</body>
+
+</html>

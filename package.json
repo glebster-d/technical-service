@@ -1,0 +1,22 @@
+{
+  "name": "building-maintanance",
+  "version": "1.0.0",
+  "description": "Building maintanance application",
+  "main": "src/main.js",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "electron": "^10.1.2",
+    "jquery": "^3.5.1",    
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",    
+    "popper.js": "^1.16.1"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Glebster-D",
+  "license": "ISC"
+}
