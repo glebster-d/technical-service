@@ -3,8 +3,7 @@ const url = require('url');
 const path = require('path');
 const fs = require('fs');
 
-const Store = require('./store.js');
-
+const Store = require('src/js/store.js');
 
 const { app, BrowserWindow, Menu, ipcMain } = electron;
 
@@ -18,7 +17,7 @@ let settingsWindow;
 const store = new Store({
     configName: 'values-config',
     defaults: {
-        operatorsList:  ['גלב', 'ארי', 'אחמ"ש'],
+        operatorsList:  ['גיל', 'ארי', 'אחמ"ש'],
         technicList: ['איגור', 'סאשה', 'קוסטה', 'ארקדי'],
         outSourceWorkers: ['UPS', 'CONTEL', 'אדוויס', 'YM']
     }
@@ -37,7 +36,7 @@ function createMainWindow() {
     });
     
     mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'mainWindow.html'),
+        pathname: path.join(__dirname, 'html/mainWindow.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -69,7 +68,7 @@ function createAddWindow() {
     
     addWindow.loadURL(url.format({
 
-        pathname: path.join(__dirname, 'addWindow.html'),
+        pathname: path.join(__dirname, 'html/addWindow.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -93,7 +92,7 @@ function createSettingsWindow() {
     });
 
     settingsWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'settingsWindow.html'),
+        pathname: path.join(__dirname, 'html/settingsWindow.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -118,7 +117,7 @@ function createAboutWindow() {
     });
 
     aboutWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'aboutWindow.html'),
+        pathname: path.join(__dirname, 'html/aboutWindow.html'),
         protocol: 'file:',
         slashes: true
     }));

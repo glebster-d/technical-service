@@ -1,8 +1,8 @@
 {
-  "name": "building-maintanance",
+  "name": "technical-service",
   "version": "1.0.0",
-  "description": "Building maintanance application",
-  "main": "src/main.js",
+  "description": "Technical service application",
+  "main": "src/js/main.js",
   "dependencies": {
     "bootstrap": "^4.5.2",
     "electron": "^10.1.2",
