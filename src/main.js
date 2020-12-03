@@ -3,7 +3,7 @@ const url = require('url');
 const path = require('path');
 const fs = require('fs');
 
-const Store = require('src/js/store.js');
+const Store = require('./util/store');
 
 const { app, BrowserWindow, Menu, ipcMain } = electron;
 
@@ -36,7 +36,7 @@ function createMainWindow() {
     });
     
     mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'html/mainWindow.html'),
+        pathname: path.join(__dirname, 'src/mainWindow/mainWindow.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -68,7 +68,7 @@ function createAddWindow() {
     
     addWindow.loadURL(url.format({
 
-        pathname: path.join(__dirname, 'html/addWindow.html'),
+        pathname: path.join(__dirname, 'src/addWindow/addWindow.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -92,7 +92,7 @@ function createSettingsWindow() {
     });
 
     settingsWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'html/settingsWindow.html'),
+        pathname: path.join(__dirname, 'src/settingsWindow/settingsWindow.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -117,7 +117,7 @@ function createAboutWindow() {
     });
 
     aboutWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'html/aboutWindow.html'),
+        pathname: path.join(__dirname, 'src/aboutWindow/aboutWindow.html'),
         protocol: 'file:',
         slashes: true
     }));
