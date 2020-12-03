@@ -5,7 +5,7 @@ window.$ = window.jQuery = require('jquery');
 window.Popper = require('popper.js');
 require('bootstrap');
 
-const Store = require('../util/store.js');
+const Store = require('./util/store');
 
 const store = new Store({
     configName: 'values-config',

@@ -2,7 +2,7 @@
   "name": "technical-service",
   "version": "1.0.0",
   "description": "Technical service application",
-  "main": "src/js/main.js",
+  "main": "src/main.js",
   "dependencies": {
     "bootstrap": "^4.5.2",
     "electron": "^10.1.2",

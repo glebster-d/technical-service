@@ -36,7 +36,7 @@ function createMainWindow() {
     });
     
     mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'src/mainWindow/mainWindow.html'),
+        pathname: path.join(__dirname, 'mainWindow/mainWindow.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -68,7 +68,7 @@ function createAddWindow() {
     
     addWindow.loadURL(url.format({
 
-        pathname: path.join(__dirname, 'src/addWindow/addWindow.html'),
+        pathname: path.join(__dirname, 'addWindow/addWindow.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -92,7 +92,7 @@ function createSettingsWindow() {
     });
 
     settingsWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'src/settingsWindow/settingsWindow.html'),
+        pathname: path.join(__dirname, 'settingsWindow/settingsWindow.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -117,7 +117,7 @@ function createAboutWindow() {
     });
 
     aboutWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'src/aboutWindow/aboutWindow.html'),
+        pathname: path.join(__dirname, 'aboutWindow/aboutWindow.html'),
         protocol: 'file:',
         slashes: true
     }));
