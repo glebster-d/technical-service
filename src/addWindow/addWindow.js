@@ -1,7 +1,9 @@
+'use strict'
+
 const electron = require('electron');
 const {ipcRenderer} = electron;
 
-const Store = require('./store.js');
+const Store = require("./util/store");
 
 window.$ = window.JQuery = require('jquery');
 
