@@ -3,16 +3,16 @@
 const electron = require('electron');
 const {ipcRenderer} = electron;
 
-const Store = require("./util/store");
+const Store = require('../util/store');
 
 window.$ = window.JQuery = require('jquery');
 
 const store = new Store({
     configName: 'values-config',
     defaults: {
-        operatorsList:  ['גלב', 'ארי'],
-        technicList: ['איגור', 'סאשה', 'קוסטה', 'ארקדי'],
-        outSourceWorkers: ['UPS', 'CONTEL', 'אדוויס', 'YM']
+        operatorsList:  ['Operators list not loaded'],
+        technicList: ['Technics list not loaded'],
+        outSourceWorkers: ['Outsource workers list not loaded']
     }
 });
 

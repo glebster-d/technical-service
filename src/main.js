@@ -5,7 +5,7 @@ const url = require('url');
 const path = require('path');
 const fs = require('fs');
 
-const Store = require('./util/store');
+const Store = require('../util/store');
 
 const { app, BrowserWindow, Menu, ipcMain } = electron;
 
@@ -64,8 +64,7 @@ function createAddWindow() {
             nodeIntegration: true,
             defaultEncoding: 'UTF-8',
             worldSafeExecuteJavaScript: true
-        },
-        // worldSafeExecuteJavaScript: true
+        }        
     });
     
     addWindow.loadURL(url.format({
