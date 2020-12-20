@@ -1,13 +1,14 @@
 'use strict'
 
 const electron = require('electron');
-const {ipcRenderer} = electron;
+const {ipcRenderer, app, remote} = electron;
 
 const Store = require('../util/store');
 
 window.$ = window.JQuery = require('jquery');
 
 const store = new Store({
+    app: remote.app,
     configName: 'values-config',
     defaults: {
         operatorsList:  ['Operators list not loaded'],
